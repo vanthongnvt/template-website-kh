@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<%include layout/header%>
+
+<body>
+
+	<!--================Header Menu Area =================-->
+	<%include layout/navigation%>
+	<!--================Header Menu Area =================-->
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>My account</h2>
+					<div class="page_link">
+						<a href="index.html">Home</a>
+						<a href="login.html">Acount</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Login Box Area =================-->
+	<section class="login_box_area p_120">
+		<div class="container">
+			<div class="banner_content text-center">
+				<h3>Account Infomation</h3>
+			</div>
+			<form action="#">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="mt-10">
+							<label>User name:</label>
+							<input type="text" name="last_name" value="@username" disabled required class="single-input">
+						</div>
+
+						<div class="mt-10">
+							<label>First Name:</label>
+							<input type="text" name="first_name" 
+							required class="single-input">
+						</div>
+
+						<div class="mt-10">
+							<label>Last Name:</label>
+							<input type="text" name="last_name"
+							required class="single-input">
+						</div>
+
+						<div class="mt-10">
+							<label>Email: </label>
+							<input type="email" name="EMAIL"
+							required class="single-input">
+						</div>
+
+					</div>
+					<div class="col-lg-6">
+						<div class="mt-10">
+							<label>Address: </label>
+							<div class="input-group-icon">
+								<div class="icon">
+									<i class="fa fa-thumb-tack" aria-hidden="true"></i>
+								</div>
+								<input type="text" name="address"
+								required class="single-input">
+							</div>
+						</div>
+						<div class="mt-10">
+							<label>City:</label>
+							<div class="input-group-icon">
+								<div class="icon">
+									<i class="fa fa-plane" aria-hidden="true"></i>
+								</div>
+								<div class="form-select" id="default-select">
+									<select>
+										<option value="1">City</option>
+										<option value="1">Dhaka</option>
+										<option value="1">Dilli</option>
+										<option value="1">Newyork</option>
+										<option value="1">Islamabad</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="mt-10">
+							<label>Country:</label>
+							<div class="input-group-icon">
+								<div class="icon">
+									<i class="fa fa-globe" aria-hidden="true"></i>
+								</div>
+								<div class="form-select" id="default-select2">
+									<select>
+										<option value="1">Country</option>
+										<option value="1">Bangladesh</option>
+										<option value="1">India</option>
+										<option value="1">England</option>
+										<option value="1">Srilanka</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="mt-10 form-group text-center">
+							<button type="submit" value="submit" class="btn submit_btn">Save infomation</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+	<%include layout/footer%>
+</body>
+
+</html>
