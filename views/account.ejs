@@ -28,87 +28,126 @@
 	<!--================Login Box Area =================-->
 	<section class="login_box_area p_120">
 		<div class="container">
-			<div class="banner_content text-center">
-				<h3>Account Infomation</h3>
-			</div>
-			<form action="/" method="post">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="mt-10">
-							<label>User name:</label>
-							<input type="text" name="last_name" value="@username" disabled required class="single-input">
-						</div>
+			<div class="account_info">
+				<div class="banner_content text-center">
+					<h3>Account Infomation</h3>
+				</div>
+				<form action="/" method="post">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="mt-10">
+								<label>User name:</label>
+								<input type="text" name="last_name" value="@username" disabled required class="single-input">
+							</div>
 
-						<div class="mt-10">
-							<label>First Name:</label>
-							<input type="text" name="first_name" 
-							required class="single-input">
-						</div>
-
-						<div class="mt-10">
-							<label>Last Name:</label>
-							<input type="text" name="last_name"
-							required class="single-input">
-						</div>
-
-						<div class="mt-10">
-							<label>Email: </label>
-							<input type="email" name="EMAIL"
-							required class="single-input">
-						</div>
-
-					</div>
-					<div class="col-lg-6">
-						<div class="mt-10">
-							<label>Address: </label>
-							<div class="input-group-icon">
-								<div class="icon">
-									<i class="fa fa-thumb-tack" aria-hidden="true"></i>
-								</div>
-								<input type="text" name="address"
+							<div class="mt-10">
+								<label>First Name:</label>
+								<input type="text" name="first_name" 
 								required class="single-input">
 							</div>
+
+							<div class="mt-10">
+								<label>Last Name:</label>
+								<input type="text" name="last_name"
+								required class="single-input">
+							</div>
+
+							<div class="mt-10">
+								<label>Email: </label>
+								<input type="email" name="EMAIL"
+								required class="single-input">
+							</div>
+
 						</div>
-						<div class="mt-10">
-							<label>City:</label>
-							<div class="input-group-icon">
-								<div class="icon">
-									<i class="fa fa-plane" aria-hidden="true"></i>
-								</div>
-								<div class="form-select" id="default-select">
-									<select>
-										<option value="1">City</option>
-										<option value="1">Dhaka</option>
-										<option value="1">Dilli</option>
-										<option value="1">Newyork</option>
-										<option value="1">Islamabad</option>
-									</select>
+						<div class="col-lg-6">
+							<div class="mt-10">
+								<label>Address: </label>
+								<div class="input-group-icon">
+									<div class="icon">
+										<i class="fa fa-thumb-tack" aria-hidden="true"></i>
+									</div>
+									<input type="text" name="address"
+									required class="single-input">
 								</div>
 							</div>
-						</div>
-						<div class="mt-10">
-							<label>Country:</label>
-							<div class="input-group-icon">
-								<div class="icon">
-									<i class="fa fa-globe" aria-hidden="true"></i>
-								</div>
-								<div class="form-select" id="default-select2">
-									<select>
-										<option value="1">Country</option>
-										<option value="1">Bangladesh</option>
-										<option value="1">India</option>
-										<option value="1">England</option>
-										<option value="1">Srilanka</option>
-									</select>
+							<div class="mt-10">
+								<label>City:</label>
+								<div class="input-group-icon">
+									<div class="icon">
+										<i class="fa fa-plane" aria-hidden="true"></i>
+									</div>
+									<div class="form-select" id="default-select">
+										<select>
+											<option value="1">City</option>
+											<option value="1">Dhaka</option>
+											<option value="1">Dilli</option>
+											<option value="1">Newyork</option>
+											<option value="1">Islamabad</option>
+										</select>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="mt-10 form-group text-center">
-							<button type="submit" value="submit" class="btn submit_btn">Save infomation</button>
+							<div class="mt-10">
+								<label>Country:</label>
+								<div class="input-group-icon">
+									<div class="icon">
+										<i class="fa fa-globe" aria-hidden="true"></i>
+									</div>
+									<div class="form-select" id="default-select2">
+										<select>
+											<option value="1">Country</option>
+											<option value="1">Bangladesh</option>
+											<option value="1">India</option>
+											<option value="1">England</option>
+											<option value="1">Srilanka</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="mt-10 form-group text-center">
+								<button type="submit" value="submit" class="btn submit_btn">Save infomation</button>
+							</div>
 						</div>
 					</div>
+				</form>
+			</div>
+			<div class="order_history my-5">
+				<div class="banner_content text-center">
+					<h3>Order History</h3>
 				</div>
-			</form>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Order</th>
+								<th scope="col">Date</th>
+								<th scope="col">Status</th>
+								<th scope="col">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% for(var i=1;i<=3;i++){ 
+								%>
+								<tr>
+									<td>
+										<h5 class="mt-10">#<%=i%></h5>
+									</td>
+									<td>
+										<h5 class="mt-10">March 29, 2018</h5>
+									</td>
+									<td>
+										<h5 class="mt-10">Completed</h5>
+									</td>
+									<td>
+										<h5 class="mt-10">$720.00</h5>
+									</td>
+								</tr>
+								<%
+							}%>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</section>
 	<!--================End Login Box Area =================-->
