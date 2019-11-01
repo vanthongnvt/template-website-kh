@@ -40,25 +40,25 @@
 							</tr>
 						</thead>
 						<tbody>
-							<% for(var i=1;i<=3;i++){ 
+							<% cart.items.forEach(function(item){
 								%>
 								<tr>
 									<td>
 										<div class="media">
 											<div class="d-flex">
-												<img src="img/product/single-product/cart-1.jpg" alt="">
+												<img src="img/product/single-product/<%=item.image%>" alt="">
 											</div>
 											<div class="media-body">
-												<p>Minimalistic shop for multipurpose use</p>
+												<p><%=item.name%></p>
 											</div>
 										</div>
 									</td>
 									<td>
-										<h5>$360.00</h5>
+										<h5><%=item.cost%> VNĐ</h5>
 									</td>
 									<td>
 										<div class="product_count">
-											<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+											<input type="text" name="qty" id="sst" maxlength="12" value="<%=item.quantity%>" title="Quantity:" class="input-text qty">
 											<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 											class="increase items-count" type="button">
 											<i class="lnr lnr-chevron-up"></i>
@@ -70,11 +70,11 @@
 									</div>
 								</td>
 								<td>
-									<h5>$720.00</h5>
+									<h5><%= item.total%> VNĐ</h5>
 								</td>
 							</tr>
 							<%
-						}%>
+						})%>
 
 						
 				<tr class="bottom_button">
@@ -101,10 +101,10 @@
 
 					</td>
 					<td>
-						<h5>Tổng thanh toán</h5>
+						<h5>Tổng tiền hàng</h5>
 					</td>
 					<td>
-						<h5>$2160.00</h5>
+						<h5><%=cart.total%> VNĐ</h5>
 					</td>
 				</tr>
 				<tr class="shipping_area">

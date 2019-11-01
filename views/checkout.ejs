@@ -116,31 +116,31 @@
 										<span>Tổng</span>
 									</a>
 								</li>
-								<% for (var i = 1; i <= 3; i++) {
+								<% cart.items.forEach(function(item) {
 									%>
 									<li>
-										<a href="/san-pham">Fresh Blackberry
-											<span class="middle">x 02</span>
-											<span class="last">$720.00</span>
+										<a href="/san-pham"><%=item.name %>
+											<span class="middle">x <%=item.quantity%></span>
+											<span class="last"><%=item.cost%> VNĐ</span>
 										</a>
 									</li>
 									<%
-								} %>
+								}) %>
 							</ul>
 							<ul class="list list_2">
 								<li>
-									<a href="javascript:void(0)">Subtotal
-										<span>$2160.00</span>
+									<a href="javascript:void(0)">Tổng tiền hàng
+										<span><%=cart.subtotal%> VNĐ</span>
 									</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Shipping
-										<span>Flat rate: $50.00</span>
+									<a href="javascript:void(0)">Phí vận chuyển
+										<span>Flat rate: <%=cart.ship%> VNĐ</span>
 									</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Total
-										<span>$2210.00</span>
+									<a href="javascript:void(0)">Tổng thanh toán
+										<span><%=cart.total%> VNĐ</span>
 									</a>
 								</li>
 							</ul>

@@ -37,24 +37,24 @@
 						<div class="col-lg-6">
 							<div class="mt-10">
 								<label>Tên tài khoản:</label>
-								<input type="text" name="last_name" value="@username" disabled required class="single-input">
+								<input type="text" name="last_name" value="<%=account_info.username%>" disabled required class="single-input">
 							</div>
 
 							<div class="mt-10">
 								<label>Họ:</label>
-								<input type="text" name="first_name" 
+								<input type="text" name="first_name" value="<%=account_info.firstname%>" 
 								required class="single-input">
 							</div>
 
 							<div class="mt-10">
 								<label>Tên:</label>
-								<input type="text" name="last_name"
+								<input type="text" name="last_name" value="<%=account_info.lastname%>" 
 								required class="single-input">
 							</div>
 
 							<div class="mt-10">
 								<label>Email: </label>
-								<input type="email" name="EMAIL"
+								<input type="email" name="EMAIL" value="<%=account_info.email%>" 
 								required class="single-input">
 							</div>
 
@@ -126,24 +126,24 @@
 							</tr>
 						</thead>
 						<tbody>
-							<% for(var i=1;i<=3;i++){ 
+							<% order_history.forEach(function(order){ 
 								%>
 								<tr>
 									<td>
-										<h5 class="mt-10">#<%=i%></h5>
+										<h5 class="mt-10">#<%=order.id%></h5>
 									</td>
 									<td>
-										<h5 class="mt-10">March 29, 2018</h5>
+										<h5 class="mt-10"><%=order.date%></h5>
 									</td>
 									<td>
-										<h5 class="mt-10">Completed</h5>
+										<h5 class="mt-10"><%=order.status%></h5>
 									</td>
 									<td>
-										<h5 class="mt-10">$720.00</h5>
+										<h5 class="mt-10"><%=order.total%> VNĐ</h5>
 									</td>
 								</tr>
 								<%
-							}%>
+							})%>
 						</tbody>
 					</table>
 				</div>
