@@ -28,15 +28,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/account', accountRouter);
-app.use('/cart', cartRouter);
-app.use('/category', categoryRouter);
-app.use('/checkout', checkoutRouter);
-app.use('/forgot-password',fpasswordRouter);
-app.use('/contact', contactRouter);
-app.use('/login', loginRouter);
-app.use('/product', productRouter);
-app.use('/registration', registrationRouter);
+app.use('/tai-khoan', accountRouter);
+app.use('/gio-hang', cartRouter);
+app.use('/phan-loai', categoryRouter);
+app.use('/thanh-toan', checkoutRouter);
+app.use('/quen-mat-khau',fpasswordRouter);
+app.use('/lien-he', contactRouter);
+app.use('/dang-nhap', loginRouter);
+app.use('/san-pham', productRouter);
+app.use('/dang-ky', registrationRouter);
 
 
 // catch 404 and forward to error handler

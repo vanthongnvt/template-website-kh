@@ -13,11 +13,11 @@
 		<div class="banner_inner d-flex align-items-center">
 			<div class="container">
 				<div class="banner_content text-center">
-					<h2>Single Product Page</h2>
+					<h2>Chi tiết sản phẩm</h2>
 					<div class="page_link">
-						<a href="/">Home</a>
-						<a href="/category">Category</a>
-						<a href="/product">Product Details</a>
+						<a href="/">Trang chủ</a>
+						<a href="/phan-loai">Phân loại</a>
+						<a href="/san-pham">Chi tiết sản phẩm</a>
 					</div>
 				</div>
 			</div>
@@ -64,17 +64,17 @@
 						<ul class="list">
 							<li>
 								<a class="active" href="#">
-									<span>Category</span> : Household</a>
+									<span>Loại</span> : Household</a>
 							</li>
 							<li>
 								<a href="#">
-									<span>Availibility</span> : In Stock</a>
+									<span>Tình trạng</span> : In Stock</a>
 							</li>
 						</ul>
 						<p>Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that
 							can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter.</p>
 						<div class="product_count">
-							<label for="qty">Quantity:</label>
+							<label for="qty">Số lượng:</label>
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 							 class="increase items-count" type="button">
@@ -86,7 +86,7 @@
 							</button>
 						</div>
 						<div class="card_area">
-							<a class="main_btn" href="#">Add to Cart</a>
+							<a class="main_btn" href="#">Thêm vào giỏ hàng</a>
 							<a class="icon_btn" href="#">
 								<i class="lnr lnr lnr-diamond"></i>
 							</a>
@@ -106,16 +106,16 @@
 		<div class="container">
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 				<li class="nav-item">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mô tả</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Specification</a>
+					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Chi tiết</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Comments</a>
+					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Bình luận</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews</a>
+					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Đánh giá</a>
 				</li>
 			</ul>
 			<div class="tab-content" id="myTabContent">
